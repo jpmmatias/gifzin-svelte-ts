@@ -6,7 +6,7 @@
 {#if gifShowing}
 <header>
   <button on:click={reset}>
-    Close Button
+    <img src="imgs/close-icon.svg" alt="Icone de fechar">
   </button>
 </header>
 {:else}
@@ -17,12 +17,18 @@
 
 <style>
   header {
-  line-height: 50px;
-   display: grid;
-  place-items: center;
+    margin-bottom: 1.4rem;
+    line-height: 50px;
+    display: grid;
+    place-items: center;
   }
   h1{
     margin: 0;
-  font-size: 24px;
+    font-size: 38px;
+  }
+
+  button{
+    background:none;
+    border: none;
   }
 </style>

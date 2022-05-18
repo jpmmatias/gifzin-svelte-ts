@@ -18,8 +18,9 @@
 
 <style>
   p {
+    margin-top: 2rem;
   text-align: center;
-  font-size: 24px;
+  font-size: 1.2rem;
   line-height: 38px;
   min-height: 38px;
 }

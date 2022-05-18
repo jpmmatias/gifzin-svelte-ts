@@ -49,6 +49,7 @@ export default {
 	plugins: [
 		replace({
 			GIPHY_API_KEY: JSON.stringify(process.env.GIPHY_API_KEY),
+			preventAssignment: true,
 		}),
 		svelte({
 			preprocess: sveltePreprocess({ sourceMap: !production }),

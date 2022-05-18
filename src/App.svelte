@@ -1,7 +1,5 @@
 <script lang="ts">
-	import Header from './components/Header.svelte';
-	import Hint from './components/Hint.svelte';
-	import Search from './components/Search.svelte'
+	import {Header,Hint,Search} from './components'
 	import {validTextSearch} from './helpers/validTextSearch'
 	import type { IGif } from './@types/IGif'
 
@@ -23,16 +21,11 @@ export async function fetchGifs(event:KeyboardEvent) {
       	const data = await response.json()
 
 				const gifs = data.data
-
         const randomNumber =  Math.floor(Math.random()*gifs.length)
-console.log(randomNumber)
 				const selectedGif = gifs[randomNumber]
 				const currentGif = {src: selectedGif.images.original.mp4}
 
 				allGifs = [...allGifs, currentGif];
-
-console.log(allGifs)
-
 				gifShowing = true
 		} catch (error) {
 			console.log(error)
@@ -45,7 +38,6 @@ console.log(allGifs)
 <main>
 	<Header reset={reset} gifShowing = {gifShowing} />
 	<Search bind:value="{textSearch}" gifShowing = {gifShowing}/>
-	<Hint textSearch="{textSearch}" gifShowing = {gifShowing}/>
 
 	{#if gifShowing}
 	<div class="videoContainer">
@@ -57,6 +49,7 @@ console.log(allGifs)
 
 	</div>
 	{/if}
+	<Hint textSearch="{textSearch}" gifShowing = {gifShowing}/>
 </main>
 
 <svelte:window on:keypress={(event)=>fetchGifs(event)} />
@@ -70,6 +63,7 @@ console.log(allGifs)
 		justify-content: center;
 	}
 	.videoContainer {
+		flex: .7;
 		width: 100%;
 	 	display: grid;
   	place-items: center;

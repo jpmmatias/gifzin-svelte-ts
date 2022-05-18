@@ -432,10 +432,10 @@ var app = (function () {
     			header = element("header");
     			h1 = element("h1");
     			h1.textContent = "Gifzin";
-    			attr_dev(h1, "class", "title svelte-pbaynr");
-    			add_location(h1, file$3, 12, 2, 182);
-    			attr_dev(header, "class", "svelte-pbaynr");
-    			add_location(header, file$3, 11, 0, 171);
+    			attr_dev(h1, "class", "title svelte-1vvw6vo");
+    			add_location(h1, file$3, 12, 2, 223);
+    			attr_dev(header, "class", "svelte-1vvw6vo");
+    			add_location(header, file$3, 11, 0, 212);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, header, anchor);
@@ -462,6 +462,8 @@ var app = (function () {
     function create_if_block$3(ctx) {
     	let header;
     	let button;
+    	let img;
+    	let img_src_value;
     	let mounted;
     	let dispose;
 
@@ -469,14 +471,19 @@ var app = (function () {
     		c: function create() {
     			header = element("header");
     			button = element("button");
-    			button.textContent = "Close Button";
+    			img = element("img");
+    			if (!src_url_equal(img.src, img_src_value = "imgs/close-icon.svg")) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "Icone de fechar");
+    			add_location(img, file$3, 7, 4, 128);
+    			attr_dev(button, "class", "svelte-1vvw6vo");
     			add_location(button, file$3, 6, 2, 98);
-    			attr_dev(header, "class", "svelte-pbaynr");
+    			attr_dev(header, "class", "svelte-1vvw6vo");
     			add_location(header, file$3, 5, 0, 87);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, header, anchor);
     			append_dev(header, button);
+    			append_dev(button, img);
 
     			if (!mounted) {
     				dispose = listen_dev(
@@ -659,7 +666,7 @@ var app = (function () {
     			p.textContent = "Pesquise o gif para nos acharmos o melhor do universo para vc";
     			t1 = space();
     			t2 = text(/*textSearch*/ ctx[1]);
-    			attr_dev(p, "class", "svelte-f64veu");
+    			attr_dev(p, "class", "svelte-qby25u");
     			add_location(p, file$2, 12, 1, 452);
     		},
     		m: function mount(target, anchor) {
@@ -696,7 +703,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "Por favor pesquise um gif com mais de 2 caracteres";
-    			attr_dev(p, "class", "svelte-f64veu");
+    			attr_dev(p, "class", "svelte-qby25u");
     			add_location(p, file$2, 10, 2, 385);
     		},
     		m: function mount(target, anchor) {
@@ -730,7 +737,7 @@ var app = (function () {
     			p = element("p");
     			t0 = text("Clique enter para pesquisar ");
     			t1 = text(/*textSearch*/ ctx[1]);
-    			attr_dev(p, "class", "svelte-f64veu");
+    			attr_dev(p, "class", "svelte-qby25u");
     			add_location(p, file$2, 8, 2, 260);
     		},
     		m: function mount(target, anchor) {
@@ -768,7 +775,7 @@ var app = (function () {
     			p = element("p");
     			t0 = text("Clique enter para novamente ");
     			t1 = text(/*textSearch*/ ctx[1]);
-    			attr_dev(p, "class", "svelte-f64veu");
+    			attr_dev(p, "class", "svelte-qby25u");
     			add_location(p, file$2, 6, 2, 156);
     		},
     		m: function mount(target, anchor) {
@@ -1115,7 +1122,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (39:1) {#if gifShowing}
+    // (34:1) {#if gifShowing}
     function create_if_block(ctx) {
     	let div;
     	let each_value = /*allGifs*/ ctx[4];
@@ -1134,8 +1141,8 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(div, "class", "videoContainer svelte-x0zkx5");
-    			add_location(div, file, 39, 1, 1360);
+    			attr_dev(div, "class", "videoContainer svelte-xrkzum");
+    			add_location(div, file, 34, 1, 1144);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -1179,14 +1186,14 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(39:1) {#if gifShowing}",
+    		source: "(34:1) {#if gifShowing}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (41:2) {#each allGifs as gif}
+    // (36:2) {#each allGifs as gif}
     function create_each_block(ctx) {
     	let video;
     	let track;
@@ -1197,12 +1204,12 @@ var app = (function () {
     			video = element("video");
     			track = element("track");
     			attr_dev(track, "kind", "captions");
-    			add_location(track, file, 42, 4, 1457);
+    			add_location(track, file, 37, 4, 1241);
     			video.autoplay = true;
     			video.loop = true;
     			if (!src_url_equal(video.src, video_src_value = /*gif*/ ctx[7].src)) attr_dev(video, "src", video_src_value);
-    			attr_dev(video, "class", "svelte-x0zkx5");
-    			add_location(video, file, 41, 3, 1417);
+    			attr_dev(video, "class", "svelte-xrkzum");
+    			add_location(video, file, 36, 3, 1201);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, video, anchor);
@@ -1222,7 +1229,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(41:2) {#each allGifs as gif}",
+    		source: "(36:2) {#each allGifs as gif}",
     		ctx
     	});
 
@@ -1236,8 +1243,8 @@ var app = (function () {
     	let search;
     	let updating_value;
     	let t1;
-    	let hint;
     	let t2;
+    	let hint;
     	let current;
     	let mounted;
     	let dispose;
@@ -1262,6 +1269,7 @@ var app = (function () {
 
     	search = new Search({ props: search_props, $$inline: true });
     	binding_callbacks.push(() => bind(search, 'value', search_value_binding));
+    	let if_block = /*gifShowing*/ ctx[2] && create_if_block(ctx);
 
     	hint = new Hint({
     			props: {
@@ -1271,8 +1279,6 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	let if_block = /*gifShowing*/ ctx[2] && create_if_block(ctx);
-
     	const block = {
     		c: function create() {
     			main = element("main");
@@ -1280,11 +1286,11 @@ var app = (function () {
     			t0 = space();
     			create_component(search.$$.fragment);
     			t1 = space();
-    			create_component(hint.$$.fragment);
-    			t2 = space();
     			if (if_block) if_block.c();
-    			attr_dev(main, "class", "svelte-x0zkx5");
-    			add_location(main, file, 33, 0, 1157);
+    			t2 = space();
+    			create_component(hint.$$.fragment);
+    			attr_dev(main, "class", "svelte-xrkzum");
+    			add_location(main, file, 29, 0, 1002);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1295,9 +1301,9 @@ var app = (function () {
     			append_dev(main, t0);
     			mount_component(search, main, null);
     			append_dev(main, t1);
-    			mount_component(hint, main, null);
-    			append_dev(main, t2);
     			if (if_block) if_block.m(main, null);
+    			append_dev(main, t2);
+    			mount_component(hint, main, null);
     			current = true;
 
     			if (!mounted) {
@@ -1319,10 +1325,6 @@ var app = (function () {
     			}
 
     			search.$set(search_changes);
-    			const hint_changes = {};
-    			if (dirty & /*textSearch*/ 8) hint_changes.textSearch = /*textSearch*/ ctx[3];
-    			if (dirty & /*gifShowing*/ 4) hint_changes.gifShowing = /*gifShowing*/ ctx[2];
-    			hint.$set(hint_changes);
 
     			if (/*gifShowing*/ ctx[2]) {
     				if (if_block) {
@@ -1330,12 +1332,17 @@ var app = (function () {
     				} else {
     					if_block = create_if_block(ctx);
     					if_block.c();
-    					if_block.m(main, null);
+    					if_block.m(main, t2);
     				}
     			} else if (if_block) {
     				if_block.d(1);
     				if_block = null;
     			}
+
+    			const hint_changes = {};
+    			if (dirty & /*textSearch*/ 8) hint_changes.textSearch = /*textSearch*/ ctx[3];
+    			if (dirty & /*gifShowing*/ 4) hint_changes.gifShowing = /*gifShowing*/ ctx[2];
+    			hint.$set(hint_changes);
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -1354,8 +1361,8 @@ var app = (function () {
     			if (detaching) detach_dev(main);
     			destroy_component(header);
     			destroy_component(search);
-    			destroy_component(hint);
     			if (if_block) if_block.d();
+    			destroy_component(hint);
     			mounted = false;
     			dispose();
     		}
@@ -1393,11 +1400,9 @@ var app = (function () {
     			const data = await response.json();
     			const gifs = data.data;
     			const randomNumber = Math.floor(Math.random() * gifs.length);
-    			console.log(randomNumber);
     			const selectedGif = gifs[randomNumber];
     			const currentGif = { src: selectedGif.images.original.mp4 };
     			$$invalidate(4, allGifs = [...allGifs, currentGif]);
-    			console.log(allGifs);
     			$$invalidate(2, gifShowing = true);
     		} catch(error) {
     			console.log(error);
