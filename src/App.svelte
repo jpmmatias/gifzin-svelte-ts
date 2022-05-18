@@ -1,5 +1,5 @@
 <script lang="ts">
-	import {Header,Hint,Search} from './components'
+	import {Header,Hint,Search, Gifs} from './components'
 	import {validTextSearch} from './helpers/validTextSearch'
 	import type { IGif } from './@types/IGif'
 
@@ -38,17 +38,7 @@ export async function fetchGifs(event:KeyboardEvent) {
 <main>
 	<Header reset={reset} gifShowing = {gifShowing} />
 	<Search bind:value="{textSearch}" gifShowing = {gifShowing}/>
-
-	{#if gifShowing}
-	<div class="videoContainer">
-		{#each allGifs as gif}
-			<video autoPlay loop src={gif.src}>
-				<track kind="captions">
-			</video>
-		{/each}
-
-	</div>
-	{/if}
+	<Gifs allGifs={allGifs} gifShowing = {gifShowing}/>
 	<Hint textSearch="{textSearch}" gifShowing = {gifShowing}/>
 </main>
 
@@ -62,38 +52,4 @@ export async function fetchGifs(event:KeyboardEvent) {
   	flex-direction: column;
 		justify-content: center;
 	}
-	.videoContainer {
-		flex: .7;
-		width: 100%;
-	 	display: grid;
-  	place-items: center;
-		position: relative;
-}
-
-video{
-	background-color: rgba(0, 0, 0, 0.085);
-  display: block;
-	position: absolute;
-  width: 100%;
-  max-width: 480px;
-  max-height: 480px;
-  box-shadow: 0 0 40px 0px rgba(0, 0, 0, 0.68);
-
-  transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
-  outline: 1px solid transparent;
-	opacity: 1;
-  transform: scale(1) rotate(0deg);
-}
-
-video:nth-of-type(2n) {
-  transform: scale(1) rotate(5deg);
-}
-
-video:nth-of-type(3n) {
-  transform: scale(1) rotate(-5deg);
-}
-
-video:nth-of-type(4n) {
-  transform: scale(1) rotate(7deg);
-}
 </style>
