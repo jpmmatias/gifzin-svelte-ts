@@ -1,14 +1,12 @@
 <script lang="ts">
-	import type { IGif } from './../@types/IGif';
+import { gifShowing, allGifs } from '../stores/appStore';
 
-  export let allGifs:IGif[];
-  export let gifShowing:boolean;
 </script>
 
 
-{#if gifShowing}
+{#if $gifShowing}
   <div class="videoContainer">
-	{#each allGifs as gif}
+	{#each $allGifs as gif}
 		<!-- svelte-ignore a11y-media-has-caption -->
       <video autoPlay loop src={gif.src}></video>
 	{/each}

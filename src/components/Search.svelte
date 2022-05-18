@@ -1,10 +1,9 @@
 <script lang="ts">
-   export let gifShowing:boolean;
-   export let value:string;
+import { gifShowing, textSearch } from '../stores/appStore';
 </script>
 
-{#if !gifShowing}
-   <input bind:value placeholder='Nome do Gif' type="text">
+{#if !$gifShowing}
+   <input bind:value={$textSearch} placeholder='Nome do Gif' type="text">
 {/if}
 
 <style>

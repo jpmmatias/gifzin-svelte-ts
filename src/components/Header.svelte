@@ -1,9 +1,8 @@
 <script lang="ts">
-  export let gifShowing:boolean;
-  export let reset:()=>void;
+  import { gifShowing, reset } from '../stores/appStore';
 </script>
 
-{#if gifShowing}
+{#if $gifShowing}
 <header>
   <button on:click={reset}>
     <img src="imgs/close-icon.svg" alt="Icone de fechar">
