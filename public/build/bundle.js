@@ -477,7 +477,6 @@ var app = (function () {
             const randomNumber = Math.floor(Math.random() * gifs.length);
             const selectedGif = gifs[randomNumber];
             const currentGif = { src: selectedGif.images.original.mp4 };
-            console.log(currentGif);
             return currentGif;
         }
         catch (error) {
@@ -504,7 +503,6 @@ var app = (function () {
             return;
         try {
             const currentGif = await fetchGif(search);
-            console.log(currentGif);
             allGifs.update((gifs) => [...gifs, currentGif]);
             gifShowing.set(true);
         }
@@ -526,10 +524,10 @@ var app = (function () {
     			header = element("header");
     			h1 = element("h1");
     			h1.textContent = "Gifzin";
-    			attr_dev(h1, "class", "title svelte-1vvw6vo");
-    			add_location(h1, file$4, 11, 2, 239);
-    			attr_dev(header, "class", "svelte-1vvw6vo");
-    			add_location(header, file$4, 10, 0, 228);
+    			attr_dev(h1, "class", "title svelte-jq6ymg");
+    			add_location(h1, file$4, 11, 2, 243);
+    			attr_dev(header, "class", "svelte-jq6ymg");
+    			add_location(header, file$4, 10, 1, 232);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, header, anchor);
@@ -568,11 +566,11 @@ var app = (function () {
     			img = element("img");
     			if (!src_url_equal(img.src, img_src_value = "imgs/close-icon.svg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "Icone de fechar");
-    			add_location(img, file$4, 6, 4, 144);
-    			attr_dev(button, "class", "svelte-1vvw6vo");
-    			add_location(button, file$4, 5, 2, 114);
-    			attr_dev(header, "class", "svelte-1vvw6vo");
-    			add_location(header, file$4, 4, 0, 103);
+    			add_location(img, file$4, 6, 3, 144);
+    			attr_dev(button, "class", "svelte-jq6ymg");
+    			add_location(button, file$4, 5, 2, 115);
+    			attr_dev(header, "class", "svelte-jq6ymg");
+    			add_location(header, file$4, 4, 1, 104);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, header, anchor);
@@ -699,8 +697,8 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "Pesquise o gif para nos acharmos o melhor do universo para vc";
-    			attr_dev(p, "class", "svelte-qby25u");
-    			add_location(p, file$3, 11, 1, 475);
+    			attr_dev(p, "class", "svelte-1rjzjou");
+    			add_location(p, file$3, 11, 1, 483);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -722,7 +720,7 @@ var app = (function () {
     	return block;
     }
 
-    // (9:77) 
+    // (9:78) 
     function create_if_block_2(ctx) {
     	let p;
 
@@ -730,8 +728,8 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "Por favor pesquise um gif com mais de 2 caracteres";
-    			attr_dev(p, "class", "svelte-qby25u");
-    			add_location(p, file$3, 9, 2, 408);
+    			attr_dev(p, "class", "svelte-1rjzjou");
+    			add_location(p, file$3, 9, 1, 416);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -746,7 +744,7 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(9:77) ",
+    		source: "(9:78) ",
     		ctx
     	});
 
@@ -764,8 +762,8 @@ var app = (function () {
     			p = element("p");
     			t0 = text("Clique enter para pesquisar ");
     			t1 = text(/*$textSearch*/ ctx[1]);
-    			attr_dev(p, "class", "svelte-qby25u");
-    			add_location(p, file$3, 7, 2, 279);
+    			attr_dev(p, "class", "svelte-1rjzjou");
+    			add_location(p, file$3, 7, 1, 287);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -800,10 +798,10 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			p = element("p");
-    			t0 = text("Clique enter para novamente ");
+    			t0 = text("Clique enter para novamente pesquisar ");
     			t1 = text(/*$textSearch*/ ctx[1]);
-    			attr_dev(p, "class", "svelte-qby25u");
-    			add_location(p, file$3, 5, 2, 172);
+    			attr_dev(p, "class", "svelte-1rjzjou");
+    			add_location(p, file$3, 5, 1, 171);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -946,8 +944,8 @@ var app = (function () {
     			input = element("input");
     			attr_dev(input, "placeholder", "Nome do Gif");
     			attr_dev(input, "type", "text");
-    			attr_dev(input, "class", "svelte-1n8rrw5");
-    			add_location(input, file$2, 4, 3, 112);
+    			attr_dev(input, "class", "svelte-15i6xzx");
+    			add_location(input, file$2, 4, 1, 110);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, input, anchor);
@@ -1083,7 +1081,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (5:0) {#if $gifShowing}
+    // (4:0) {#if $gifShowing}
     function create_if_block(ctx) {
     	let div;
     	let each_value = /*$allGifs*/ ctx[1];
@@ -1102,8 +1100,8 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(div, "class", "videoContainer svelte-1ltcc2x");
-    			add_location(div, file$1, 5, 2, 108);
+    			attr_dev(div, "class", "videoContainer svelte-mej5yq");
+    			add_location(div, file$1, 4, 1, 106);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -1147,14 +1145,14 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(5:0) {#if $gifShowing}",
+    		source: "(4:0) {#if $gifShowing}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (7:1) {#each $allGifs as gif}
+    // (6:2) {#each $allGifs as gif}
     function create_each_block(ctx) {
     	let video;
     	let video_src_value;
@@ -1165,8 +1163,8 @@ var app = (function () {
     			video.autoplay = true;
     			video.loop = true;
     			if (!src_url_equal(video.src, video_src_value = /*gif*/ ctx[2].src)) attr_dev(video, "src", video_src_value);
-    			attr_dev(video, "class", "svelte-1ltcc2x");
-    			add_location(video, file$1, 8, 6, 216);
+    			attr_dev(video, "class", "svelte-mej5yq");
+    			add_location(video, file$1, 7, 3, 213);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, video, anchor);
@@ -1185,7 +1183,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(7:1) {#each $allGifs as gif}",
+    		source: "(6:2) {#each $allGifs as gif}",
     		ctx
     	});
 
@@ -1310,7 +1308,7 @@ var app = (function () {
     			create_component(gifs.$$.fragment);
     			t2 = space();
     			create_component(hint.$$.fragment);
-    			attr_dev(main, "class", "svelte-n70t7q");
+    			attr_dev(main, "class", "svelte-bkfm6d");
     			add_location(main, file, 4, 0, 135);
     		},
     		l: function claim(nodes) {
@@ -1399,7 +1397,7 @@ var app = (function () {
     }
 
     var app = new App({
-        target: document.body
+        target: document.body,
     });
 
     return app;

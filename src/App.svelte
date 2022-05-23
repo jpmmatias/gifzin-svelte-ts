@@ -1,7 +1,6 @@
 <script lang="ts">
-import {Header,Hint,Search, Gifs} from './components'
-import { fetchGifs } from './stores/appStore';
-
+	import { Header, Hint, Search, Gifs } from './components';
+	import { fetchGifs } from './stores/appStore';
 </script>
 
 <main>
@@ -11,14 +10,14 @@ import { fetchGifs } from './stores/appStore';
 	<Hint />
 </main>
 
-<svelte:window on:keypress={(event)=>fetchGifs(event)} />
+<svelte:window on:keypress={(event) => fetchGifs(event)} />
 
 <style>
-	main{
+	main {
 		min-height: 100vh;
-  	padding: 5vh 2rem;
-  	display: flex;
-  	flex-direction: column;
+		padding: 5vh 2rem;
+		display: flex;
+		flex-direction: column;
 		justify-content: center;
 	}
 </style>
