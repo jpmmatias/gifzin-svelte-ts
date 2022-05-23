@@ -4,7 +4,7 @@
 </script>
 
 {#if $gifShowing}
-  <p>Clique enter para novamente {$textSearch}</p>
+  <p>Clique enter para novamente pesquisar {$textSearch}</p>
 {:else if validTextSearch($textSearch) && !$gifShowing}
   <p>Clique enter para pesquisar {$textSearch}</p>
 {:else if !validTextSearch($textSearch) && $textSearch !=='' && !$gifShowing}
